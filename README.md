@@ -1,4 +1,4 @@
-bitcoind-rpc.js
+multichain-rpc.js
 ===============
 
 [![NPM Package](https://img.shields.io/npm/v/bitcoind-rpc.svg?style=flat-square)](https://www.npmjs.org/package/bitcoind-rpc)
