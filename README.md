@@ -5,17 +5,33 @@ bitcoind-rpc.js
 [![Build Status](https://img.shields.io/travis/bitpay/bitcoind-rpc.svg?branch=master&style=flat-square)](https://travis-ci.org/bitpay/bitcoind-rpc)
 [![Coverage Status](https://img.shields.io/coveralls/bitpay/bitcoind-rpc.svg?style=flat-square)](https://coveralls.io/r/bitpay/bitcoind-rpc?branch=master)
 
-A client library to connect to Bitcoin Core RPC in JavaScript.
+A client library to connect to Bitcoin and Ethereum RPC in JavaScript.
 
 ## Get Started
 
-bitcoind-rpc.js runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
+multichain-rpc.js runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
 
 ```bash
-npm install bitcoind-rpc
+npm install multichain-rpc
 ```
 
 ## Examples
+
+```javascript
+ // Bitcoin
+ var RpcClient = require('multichain-rpc');
+ var bitcoin = new RpcClient('bitcoin://user:pass@host:port');
+ bitcoin.getBlockchainInfo(console.log)
+
+```
+
+```javascript
+ // Ethereum
+ var RpcClient = require('multichain-rpc');
+ var ethereum = new RpcClient('ethereum://user:pass@host:port');
+ ethereum.net_version(console.log)
+
+```
 
 ```javascript
 var run = function() {
